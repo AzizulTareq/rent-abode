@@ -2,12 +2,12 @@
 import axios from "axios";
 import { AiFillGithub } from "react-icons/ai";
 import { FcGoogle } from "react-icons/fc";
-import { useCallback, useState } from "react";
+import { useState } from "react";
 import { FieldValues, SubmitHandler, useForm } from "react-hook-form";
 import useRegisterModal from "@/app/hooks/useRegisterModal";
 import Modal from "./Modal";
 import Heading from "../Heading";
-import Input from "../input/Input";
+import Input from "../inputs/Input";
 import { toast } from "react-hot-toast";
 import Button from "../Button";
 
@@ -90,7 +90,9 @@ const RegisterModal = () => {
       />
       <div className="justify-center flex flex-rows gap-2">
         <div className="">Already have an account?</div>
-        <div className="cursor-pointer text-cyan-500 font-bold hover:underline">Log in</div>
+        <div className="cursor-pointer text-cyan-500 font-bold hover:underline">
+          Log in
+        </div>
       </div>
     </div>
   );
