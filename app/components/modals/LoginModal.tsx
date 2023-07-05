@@ -102,7 +102,7 @@ const LoginModal = () => {
       text-neutral-500 text-center mt-4 font-light"
       >
         <p>
-          First time using Airbnb?
+          Are you new to the platform?
           <span
             onClick={onToggle}
             className="
@@ -112,7 +112,9 @@ const LoginModal = () => {
             "
           >
             {" "}
-            Create an account
+            <span className="cursor-pointer text-cyan-500 font-bold hover:underline pl-1">
+              Create an account
+            </span>
           </span>
         </p>
       </div>

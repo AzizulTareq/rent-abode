@@ -7,7 +7,7 @@ import TextTypeAnimation from "../TextTypeAnimation";
 
 const Banner = () => {
   const imageUrls = [
-    "/images/hotel9.jpg",
+    "/images/hotel12.jpg",
     "/images/hotel10.jpg",
     "/images/hotel2.jpg",
   ];
@@ -22,14 +22,14 @@ const Banner = () => {
     }, 3000);
 
     return () => clearTimeout(timeoutId);
-  }, [currentImageIndex]);
+  }, [currentImageIndex, imageUrls.length]);
 
   return (
-    <div className="bg-gray-100 min-h-screen">
+    <div className="bg-gray-100">
       <div className="">
         <div className="relative">
           <Image
-            className="h-[800px] brightness-50"
+            className="h-[700px] brightness-50"
             src={imageUrls[currentImageIndex]}
             width={0}
             height={0}

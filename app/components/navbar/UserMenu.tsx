@@ -19,14 +19,21 @@ const UserMenu: React.FC<UserMenuProps> = ({ currentUser }) => {
   const toggleOpen = useCallback(() => {
     setIsOpen((value) => !value);
   }, []);
+
+  const onRent = useCallback(() => {
+    if (!currentUser) {
+      return loginModal.onOpen();
+    }
+  }, [currentUser, loginModal]);
+
   return (
     <div className="relative md:pr-10 pr-4">
       <div className="flex flex-row items-center gap-3">
         <div
-          onClick={() => {}}
+          onClick={onRent}
           className="hidden md:block text-sm font-semibold bg-white hover:bg-amber-400 py-3 px-4 rounded-full transition cursor-pointer"
         >
-          RentAbode your home
+          RentAbode home
         </div>
         <div
           onClick={toggleOpen}

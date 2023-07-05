@@ -7,6 +7,7 @@ import ToasterProvider from "./provider/ToasterProvider";
 import LoginModal from "./components/modals/LoginModal";
 import getCurrentUser from "./actions/getCurrentUser";
 import Banner from "./components/banner/Banner";
+import Categories from "./components/categories/Categories";
 
 export const metadata = {
   title: "Create Next App",
@@ -22,16 +23,17 @@ export default async function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
-  const currentUser = await getCurrentUser()
+  const currentUser = await getCurrentUser();
   return (
     <html lang="en">
       <body className={font.className}>
         <ClientOnly>
-          <ToasterProvider/>
+          <ToasterProvider />
           <LoginModal />
           <RegisterModal />
           <Navbar currentUser={currentUser} />
           <Banner />
+          <Categories />
         </ClientOnly>
         {children}
       </body>
