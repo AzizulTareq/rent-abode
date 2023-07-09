@@ -37,7 +37,7 @@ const UserMenu: React.FC<UserMenuProps> = ({ currentUser }) => {
       <div className="flex flex-row items-center gap-3">
         <div
           onClick={onRent}
-          className="hidden md:block text-sm font-semibold bg-white hover:bg-amber-400 py-3 px-4 rounded-full transition cursor-pointer"
+          className="hidden text-sm font-semibold bg-white hover:bg-amber-400 py-3 px-4 rounded-full cursor-pointer"
         >
           RentAbode home
         </div>

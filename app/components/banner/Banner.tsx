@@ -29,7 +29,7 @@ const Banner = () => {
       <div className="">
         <div className="relative">
           <Image
-            className="h-[700px] brightness-50"
+            className="xl:h-[700px] h-[500px] sm:brightness-50 brightness-0"
             src={imageUrls[currentImageIndex]}
             width={0}
             height={0}
