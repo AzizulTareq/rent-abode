@@ -1,11 +1,18 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import { usePathname } from "next/navigation";
 import Image from "next/image";
 import Search from "./Search";
 import TextTypeAnimation from "../TextTypeAnimation";
 
 const Banner = () => {
+  const pathname = usePathname();
+  const isMainPage = pathname === "/";
+
+  if (!isMainPage) {
+    return null;
+  }
   const imageUrls = [
     "/images/hotel12.jpg",
     "/images/hotel10.jpg",

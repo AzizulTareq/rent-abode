@@ -13,7 +13,7 @@ interface NavbarProps {
 const Navbar: React.FC<NavbarProps> = ({ currentUser }) => {
   const router = useRouter();
   return (
-    <div className="fixed z-50 w-full bg-transparent shadow-sm">
+    <div className="fixed z-50 w-full bg-white shadow-sm">
       <div className="py-4">
         <Container>
           <div className="flex flex-row items-center justify-between gap-3 md:gap-0">
