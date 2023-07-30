@@ -71,6 +71,8 @@ const Modal: React.FC<ModalProps> = ({
     <>
       <div
         className="
+          sm:mt-0
+          mt-[70px]
           justify-center
           items-center
           flex
