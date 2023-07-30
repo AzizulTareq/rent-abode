@@ -36,7 +36,7 @@ const Banner = () => {
       <div className="">
         <div className="relative">
           <Image
-            className="xl:h-[700px] h-[500px] sm:brightness-50 brightness-0"
+            className="xl:h-[600px] h-[400px] sm:brightness-50 brightness-0"
             src={imageUrls[currentImageIndex]}
             width={0}
             height={0}
@@ -44,7 +44,7 @@ const Banner = () => {
             style={{ width: "100%" }}
             alt="Banner Image"
           />
-          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 rounded-xl p-6">
+          <div className="absolute sm:mt-0  mt-10 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 rounded-xl p-6">
             <div className="text-4xl font-bold text-white">
               <h2 className="text-center py-4 border-2 my-2 bg-gray-800 bg-opacity-50 px-4">
                 <TextTypeAnimation text="Your Next Space" delay={150} />

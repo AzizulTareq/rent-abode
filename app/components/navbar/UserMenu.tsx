@@ -39,13 +39,13 @@ const UserMenu: React.FC<UserMenuProps> = ({ currentUser }) => {
       <div className="flex flex-row items-center gap-3">
         <div
           onClick={onRent}
-          className="text-sm font-semibold bg-white hover:bg-amber-400 py-3 px-4 rounded-full cursor-pointer"
+          className="text-sm font-semibold bg-white hover:bg-amber-400 border-2 border-amber-400 py-3 px-4 rounded-full cursor-pointer whitespace-nowrap"
         >
-          RentAbode home
+          Create A Post
         </div>
         <div
           onClick={toggleOpen}
-          className="p-4 md:py-1 md:px-2 bg-white hover:bg-amber-400 flex flex-row items-center gap-3 rounded-full cursor-pointer hover:shadow-md transition"
+          className="px-3 py-2 bg-white hover:bg-amber-400 flex flex-row items-center gap-3 rounded-full cursor-pointer hover:shadow-md transition"
         >
           <AiOutlineMenu />
           <div>
@@ -62,12 +62,18 @@ const UserMenu: React.FC<UserMenuProps> = ({ currentUser }) => {
                   onClick={() => router.push("/trips")}
                   label="My trips"
                 />
-                <MenuItem onClick={() => router.push("/favorites")} label="My favorites" />
+                <MenuItem
+                  onClick={() => router.push("/favorites")}
+                  label="My favorites"
+                />
                 <MenuItem
                   onClick={() => router.push("/reservations")}
                   label="My reservations"
                 />
-                <MenuItem onClick={() => router.push("/properties")} label="My properties" />
+                <MenuItem
+                  onClick={() => router.push("/properties")}
+                  label="My properties"
+                />
                 <MenuItem onClick={() => {}} label="My home" />
                 <hr />
                 <MenuItem onClick={() => signOut()} label="Logout" />

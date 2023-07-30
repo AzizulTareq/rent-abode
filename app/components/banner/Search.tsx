@@ -47,7 +47,7 @@ const Search = () => {
       return `${guestCount} Guests`;
     }
 
-    return "Guests";
+    return "Number of guests";
   }, [guestCount]);
 
   return (
@@ -78,6 +78,19 @@ const Search = () => {
             text-sm
             font-semibold
             px-6
+            sm:hidden
+            block
+          "
+        >
+          Search
+        </div>
+        <div
+          className="
+            text-sm
+            font-semibold
+            px-6
+            hidden
+            sm:block
           "
         >
           {locationLabel}
@@ -107,7 +120,7 @@ const Search = () => {
             gap-3
           "
         >
-          <div className="hidden sm:block">{guestLabel}</div>
+          <div className="hidden sm:block whitespace-nowrap">{guestLabel}</div>
           <div
             className="
               p-2
