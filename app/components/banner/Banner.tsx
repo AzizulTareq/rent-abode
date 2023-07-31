@@ -47,7 +47,7 @@ const Banner = () => {
           <div className="absolute sm:mt-0  mt-10 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 rounded-xl p-6">
             <div className="text-4xl font-bold text-white">
               <h2 className="text-center py-4 border-2 my-2 bg-gray-800 bg-opacity-50 px-4">
-                <TextTypeAnimation text="Your Next Space" delay={150} />
+                Your Next Space
               </h2>
               <Search />
             </div>
