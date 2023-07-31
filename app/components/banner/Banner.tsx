@@ -7,12 +7,6 @@ import Search from "./Search";
 import TextTypeAnimation from "../TextTypeAnimation";
 
 const Banner = () => {
-  const pathname = usePathname();
-  const isMainPage = pathname === "/";
-
-  if (!isMainPage) {
-    return null;
-  }
   const imageUrls = [
     "/images/hotel12.jpg",
     "/images/hotel10.jpg",
@@ -31,6 +25,13 @@ const Banner = () => {
     return () => clearTimeout(timeoutId);
   }, [currentImageIndex, imageUrls.length]);
 
+  const pathname = usePathname();
+  const isMainPage = pathname === "/";
+
+  if (!isMainPage) {
+    return null;
+  }
+
   return (
     <div className="bg-gray-100">
       <div className="">
@@ -47,7 +48,7 @@ const Banner = () => {
           <div className="absolute sm:mt-0  mt-10 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 rounded-xl p-6">
             <div className="text-4xl font-bold text-white">
               <h2 className="text-center py-4 border-2 my-2 bg-gray-800 bg-opacity-50 px-4">
-                Your Next Space
+                <TextTypeAnimation text="Your Next Space" delay={150} />
               </h2>
               <Search />
             </div>
